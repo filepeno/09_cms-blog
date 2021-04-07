@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(245, 191, 138);
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20vw;
+}
+
+.post {
+  background-color: white;
+  color: darkblue;
+  text-align: center;
+}
