@@ -19,7 +19,7 @@ function getData() {
 getData();
 
 function showPosts(posts) {
-  console.log(posts);
+  // console.log(posts);
 
   //grab template
   const template = document.querySelector("template#frontpagepost").content;
@@ -32,6 +32,7 @@ function showPosts(posts) {
     copy.querySelector(".post_title").textContent = post.title;
     copy.querySelector(".username span").textContent = post.username;
     // copy.querySelector(".post_date span").textContent = post.username;
+    copy.querySelector("a").href = `full-post.html?id=${post._id}`;
     //append
     document.querySelector("main").appendChild(copy);
   });
