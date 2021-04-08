@@ -20,3 +20,9 @@ main {
   text-align: center;
   margin: 1vw 0;
 }
+
+/* Form page */
+form {
+  display: flex;
+  flex-direction: column;
+}
