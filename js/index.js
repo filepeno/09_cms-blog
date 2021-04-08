@@ -1,7 +1,7 @@
 // window.addEventListener("load", getData);
 
 function getData() {
-  fetch("https://keafs-8b71.restdb.io/rest/posts", {
+  fetch("https://keafs-8b71.restdb.io/rest/posts?max=5", {
     method: "GET",
     headers: {
       "x-apikey": "602e39f15ad3610fb5bb62c6",
