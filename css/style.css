@@ -24,7 +24,6 @@ nav {
 
 li {
   list-style: none;
-  padding-right: 2rem;
 }
 
 nav li:last-child {
@@ -37,7 +36,6 @@ nav li:last-child {
 
 a {
   text-decoration: none;
-  /* text-align: center; */
 }
 
 a:visited {
@@ -48,6 +46,11 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0 20vw;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
 }
 
 .post {
