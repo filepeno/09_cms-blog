@@ -9,7 +9,12 @@
   </head>
   <body>
     <header>
-      <h1>Writers' Blog</h1>
+      <h1><a href="index.html">Writers' Blog</a></h1>
+      <nav>
+        <li>
+          <a href="form-page.html">Submit a post</a>
+        </li>
+      </nav>
     </header>
     <main>
       <header>
@@ -17,15 +22,26 @@
         <p>Write what's on your mind:</p>
       </header>
       <form>
-        <label
+        <!-- <label
           >Your username: <input type="text" name="username" required
         /></label>
         <label>Post title:<input type="text" name="title" required /></label>
         <label
-          >Write your post here: <input type="text" name="content" required
+          >Write your post here: <input type="textarea" name="content" required
         /></label>
-        <label><input type="submit" value="Send" /></label>
+        <label><input type="submit" value="Send" /></label> -->
+        <label for="form_username">Your username: </label>
+        <input type="text" name="username" id="form_username" required />
+        <label for="form_title">Post title:</label>
+        <input type="text" name="title" required id="form_title" />
+        <label for="form_content">Write your post here: </label>
+        <input type="textarea" name="content" required id="form_content" />
+        <label for="submit"></label>
+        <input type="submit" value="Send" name="submit" id="form_submit" />
       </form>
+      <aside id="feedback" class="hidden">
+        <p>Thank you for your submission, we will review it shortly!</p>
+      </aside>
     </main>
     <script src="js/form-page.js"></script>
   </body>

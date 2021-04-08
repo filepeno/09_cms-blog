@@ -31,7 +31,7 @@ function showPosts(posts) {
     //adjust stuff
     copy.querySelector(".post_title").textContent = post.title;
     copy.querySelector(".username span").textContent = post.username;
-    copy.querySelector(".post_date span").textContent = post.datetime;
+    copy.querySelector(".post_date span").textContent = post.username;
     //append
     document.querySelector("main").appendChild(copy);
   });
