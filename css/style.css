@@ -1,11 +1,47 @@
+:root {
+  --bg-color: rgb(245, 191, 138);
+  --bg-color_2: white;
+  --text-color: white;
+  --contrast-color: #060658;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(245, 191, 138);
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: "Courier New", Courier, monospace;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+  padding-right: 2rem;
+}
+
+nav li:last-of-type {
+  border: 2px solid var(--text-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+a:visited {
+  color: inherit;
 }
 
 main {
@@ -15,8 +51,8 @@ main {
 }
 
 .post {
-  background-color: white;
-  color: darkblue;
+  background-color: var(--bg-color_2);
+  color: var(--contrast-color);
   text-align: center;
   margin: 1vw 0;
 }
