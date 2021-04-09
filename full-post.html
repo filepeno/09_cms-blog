@@ -31,29 +31,32 @@
       <article class="comments">
         <h2>Comments</h2>
         <section class="leave_comment">
-          <p>Here you can leave your comment:</p>
+          <p>Leave your comment here.</p>
           <form class="comment_form">
             <label for="comment_username">Your username:</label>
             <input type="text" name="username" id="comment_username" />
             <label for="comment_email">Your email:</label>
             <input type="email" name="email" id="comment_email" />
             <label for="comment_content">What's on your mind?</label>
-            <input
-              type="textarea"
-              name="content"
-              id="comment_content"
-              rows="4"
-            />
+            <input type="textarea" name="content" id="comment_content" />
           </form>
         </section>
         <h3>Previous comments</h3>
-        <!-- <template> -->
-        <section class="previous_comments">
-          <h4>*User 1*</h4>
-          <h5>Posted on <span>*09/21/21 14:32*</span></h5>
-          <p>*Not bad at all for a first timer!*</p>
+        <section>
+          <ol class="previous_comments">
+            <template class="comment_template">
+              <li>
+                <h5>
+                  <span>*User 1*</span> posted on <span>*09/21/21 14:32*</span>:
+                </h5>
+                <p>*Not bad at all for a first timer!*</p>
+              </li>
+            </template>
+          </ol>
+          <aside class="hidden">
+            <p>There are no comments yet, be the first!</p>
+          </aside>
         </section>
-        <!-- </template> -->
       </article>
     </main>
     <script src="js/full-post.js"></script>
