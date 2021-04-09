@@ -4,6 +4,7 @@ const form = document.querySelector("form");
 form.addEventListener("submit", postSubmitted);
 
 function postSubmitted(e) {
+  //prevents refreshing the page when clicking on submit
   e.preventDefault();
   console.log(form.elements.username.value);
   console.log(form.elements.title.value);

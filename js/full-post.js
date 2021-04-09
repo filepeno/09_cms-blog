@@ -22,7 +22,7 @@ fetch("https://keafs-8b71.restdb.io/rest/posts/" + id + "?fetchchildren=true", {
 // populate the page
 
 function showPost(post) {
-  console.log(post.comments);
+  // console.log(post.comments);
   document.querySelector(".full_post h2").textContent = post.title;
   document.querySelector(".full_post h3 span").textContent = post.username;
   document.querySelector(".full_post p").textContent = post.content;
@@ -31,7 +31,7 @@ function showPost(post) {
   const template = document.querySelector(".comment_template").content;
   // //loop through
   post.comments.forEach((comment) => {
-    console.log(comment);
+    // console.log(comment);
 
     // //clone it
     const clone = template.cloneNode(true);
@@ -51,3 +51,36 @@ function showPost(post) {
 }
 
 //LEAVING COMMENTS
+
+//grab the form
+const form = document.querySelector(".comment_form");
+//evtlistener
+form.addEventListener("submit", handleSubmit);
+//handle submit
+function handleSubmit(e) {
+  //prevents refreshing the page
+  e.preventDefault();
+  const payload = {
+    username: form.elements.username.value,
+    email: form.elements.email.value,
+    content: form.elements.content.value,
+    date: Date.now(),
+  };
+  console.log(payload);
+  //   fetch request
+  fetch(`https://keafs-8b71.restdb.io/rest/posts/${id}/comments`, {
+    method: "POST",
+    headers: {
+      "x-apikey": "602e39f15ad3610fb5bb62c6",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  })
+    //handle response
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+  //add comment
+}
+/*
+show comments from newest to oldest
+ */

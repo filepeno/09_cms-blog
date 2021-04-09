@@ -33,12 +33,27 @@
         <section class="leave_comment">
           <p>Leave your comment here.</p>
           <form class="comment_form">
-            <label for="comment_username">Your username:</label>
-            <input type="text" name="username" id="comment_username" />
-            <label for="comment_email">Your email:</label>
-            <input type="email" name="email" id="comment_email" />
-            <label for="comment_content">What's on your mind?</label>
-            <textarea name="content" id="comment_content"></textarea>
+            <label for="comment_username">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="comment_username"
+              placeholder="MessengerMan666"
+            />
+            <label for="comment_email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="comment_email"
+              placeholder="example@email.com"
+            />
+            <label for="comment_content">Message</label>
+            <textarea
+              name="content"
+              id="comment_content"
+              placeholder="Your message comes here."
+            ></textarea>
+            <input type="submit" value="Send" name="submit" />
           </form>
         </section>
         <h3>Previous comments</h3>
