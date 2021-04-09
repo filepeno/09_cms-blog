@@ -99,6 +99,7 @@ function handleSubmit(e) {
       form.elements.username.value = "";
       form.elements.email.value = "";
       form.elements.content.value = "";
+      document.querySelector("aside").classList.add("hidden");
     });
 }
 /*
