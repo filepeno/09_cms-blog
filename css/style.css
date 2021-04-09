@@ -52,12 +52,14 @@ main {
   margin: 0;
   padding: 0;
 }
-
+/* home page */
 .post {
   background-color: var(--bg-color_2);
   color: var(--contrast-color);
   text-align: center;
   margin: 1vw 0;
+  padding: 0.5rem;
+  box-shadow: -1px 4px 19px 0px rgba(90, 90, 90, 0.75);
 }
 
 /* Form page */
