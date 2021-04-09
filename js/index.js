@@ -1,7 +1,7 @@
 // window.addEventListener("load", getData);
 
 function getData() {
-  fetch("https://keafs-8b71.restdb.io/rest/posts?max=5", {
+  fetch("https://keafs-8b71.restdb.io/rest/posts?max=5&sort=_created&dir=-1", {
     method: "GET",
     headers: {
       "x-apikey": "602e39f15ad3610fb5bb62c6",
@@ -31,7 +31,7 @@ function showPosts(posts) {
     //adjust stuff
     copy.querySelector(".post_title").textContent = post.title;
     copy.querySelector(".username span").textContent = post.username;
-    // copy.querySelector(".post_date span").textContent = post.username;
+    copy.querySelector(".post_date span").textContent = post._created;
     copy.querySelector("a").href = `full-post.html?id=${post._id}`;
     //append
     document.querySelector("main").appendChild(copy);
