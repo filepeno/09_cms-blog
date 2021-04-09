@@ -49,3 +49,5 @@ function showPost(post) {
     document.querySelector("aside.hidden").classList.remove("hidden");
   }
 }
+
+//LEAVING COMMENTS
