@@ -32,7 +32,6 @@ function showPost(post) {
   // //loop through
   post.comments.forEach((comment) => {
     // console.log(comment);
-
     // //clone it
     const clone = template.cloneNode(true);
     // //change content
@@ -56,6 +55,7 @@ function showPost(post) {
 const form = document.querySelector(".comment_form");
 //evtlistener
 form.addEventListener("submit", handleSubmit);
+
 //handle submit
 function handleSubmit(e) {
   //prevents refreshing the page
@@ -66,6 +66,8 @@ function handleSubmit(e) {
     content: form.elements.content.value,
     date: Date.now(),
   };
+  // change input to disabled (while sending post)
+  document.querySelector("input[type=submit]").disabled = true;
   console.log(payload);
   //   fetch request
   fetch(`https://keafs-8b71.restdb.io/rest/posts/${id}/comments`, {
@@ -78,8 +80,26 @@ function handleSubmit(e) {
   })
     //handle response
     .then((res) => res.json())
-    .then((data) => console.log(data));
-  //add comment
+    .then((data) => {
+      //   change input to enabled (when submitted to database)
+      document.querySelector("input[type=submit]").disabled = false;
+      //grab template again
+      const template = document.querySelector(".comment_template").content;
+      //clone it
+      const clone = template.cloneNode(true);
+      //change content
+      clone.querySelector("h5 span:first-of-type").textContent = data.username;
+      clone.querySelector("h5 span:last-of-type").textContent = data._created;
+      clone.querySelector("p").textContent = data.content;
+      //grab parent
+      const parent = document.querySelector(".previous_comments");
+      //append
+      parent.appendChild(clone);
+      //   clear form values
+      form.elements.username.value = "";
+      form.elements.email.value = "";
+      form.elements.content.value = "";
+    });
 }
 /*
 show comments from newest to oldest
