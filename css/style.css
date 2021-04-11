@@ -24,6 +24,10 @@ header {
   padding: 1vw 3vw 3vw 3vw;
 }
 
+h1 span {
+  color: var(--contrast-color);
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -41,6 +45,10 @@ a {
 
 a:visited {
   color: inherit;
+}
+
+a:active {
+  color: var(--contrast-color);
 }
 
 nav > li > a:last-of-type {
@@ -75,7 +83,7 @@ main {
   text-align: center;
   margin: 1vw 0;
   padding: 0.5rem;
-  box-shadow: -1px 4px 19px 0px rgba(23, 83, 89, 0.5);
+  box-shadow: -1px 4px 19px 0px rgba(23, 83, 89, 0.7);
 }
 
 .username,
@@ -133,7 +141,7 @@ input[type="submit"]:hover {
 
 /* media queries */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   body {
     font-size: 0.8rem;
   }
@@ -148,11 +156,20 @@ input[type="submit"]:hover {
     align-items: center;
   }
 
+  nav li:first-of-type {
+    margin-bottom: 4vw;
+    font-size: 1rem;
+  }
+
   nav > li > a:last-of-type {
     padding: 0.3rem 1.2rem;
   }
 
   main {
     margin: 0 10vw;
+  }
+
+  h2 {
+    text-align: center;
   }
 }
