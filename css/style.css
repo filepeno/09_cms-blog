@@ -1,8 +1,9 @@
 :root {
-  --bg-color: rgb(245, 191, 138);
-  --bg-color_2: white;
+  --bg-color: rgb(37, 98, 104);
+  --bg-color_2: #13575e;
   --text-color: white;
-  --contrast-color: #060658;
+  --contrast-color: rgb(227, 147, 0);
+  /* --text-color_2: ; */
 }
 
 * {
@@ -13,6 +14,13 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: "Courier New", Courier, monospace;
+  margin: 0;
+}
+
+/* header */
+
+header {
+  padding: 1vw 3vw 3vw 3vw;
 }
 
 nav {
@@ -26,7 +34,16 @@ li {
   list-style: none;
 }
 
-nav li:last-child {
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+nav > li > a:last-of-type {
+  text-decoration: none;
   border: 2px solid var(--text-color);
   background: var(--bg-color);
   color: var(--text-color);
@@ -34,12 +51,10 @@ nav li:last-child {
   padding: 0.5rem 1.5rem;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  color: inherit;
+nav > li > a:last-of-type:hover {
+  background: var(--contrast-color);
+  color: var(--text-color);
+  border-color: var(--contrast-color);
 }
 
 main {
@@ -52,12 +67,19 @@ main {
   margin: 0;
   padding: 0;
 }
-
+/* home page */
 .post {
   background-color: var(--bg-color_2);
-  color: var(--contrast-color);
+  color: var(--text-color);
   text-align: center;
   margin: 1vw 0;
+  padding: 0.5rem;
+  box-shadow: -1px 4px 19px 0px rgba(23, 83, 89, 0.5);
+}
+
+.username,
+.post_date {
+  color: var(--contrast-color);
 }
 
 /* Form page */
@@ -73,4 +95,13 @@ form {
 
 .hidden {
   display: none;
+}
+
+/* FULL POST PAGE */
+.full_post {
+  /* background-color: var(--bg-color_2); */
+  color: var(--text-color);
+  text-align: left;
+  /* padding: 2rem; */
+  /* box-shadow: -1px 4px 19px 0px rgba(23, 83, 89, 0.5); */
 }
