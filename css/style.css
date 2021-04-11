@@ -70,6 +70,7 @@ nav > li > a:last-of-type:hover {
   background: var(--contrast-color);
   color: var(--text-color);
   border-color: var(--contrast-color);
+  box-shadow: -1px 4px 19px 0px rgba(10, 51, 54, 0.5);
 }
 
 main {
