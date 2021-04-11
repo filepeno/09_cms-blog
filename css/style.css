@@ -98,6 +98,10 @@ main {
   color: var(--contrast-color);
 }
 
+.username span {
+  font-style: italic;
+}
+
 /* Form page */
 form {
   display: flex;
@@ -138,11 +142,9 @@ input[type="submit"]:hover {
 
 /* FULL POST PAGE */
 .full_post {
-  /* background-color: var(--bg-color_2); */
   color: var(--text-color);
   text-align: left;
   padding-bottom: 2rem;
-  /* box-shadow: -1px 4px 19px 0px rgba(23, 83, 89, 0.5); */
   border-bottom: 1px solid var(--text-color);
 }
 
@@ -176,7 +178,9 @@ input[type="submit"]:hover {
     margin: 0 10vw;
   }
 
-  h2 {
+  h2,
+  h3,
+  .post_date {
     text-align: center;
   }
 }
