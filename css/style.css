@@ -130,3 +130,29 @@ input[type="submit"]:hover {
   /* box-shadow: -1px 4px 19px 0px rgba(23, 83, 89, 0.5); */
   border-bottom: 1px solid var(--text-color);
 }
+
+/* media queries */
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  header {
+    padding: 1vw 3vw 6vw 3vw;
+  }
+
+  nav {
+    flex-direction: column;
+    margin: 0 10vw;
+    align-items: center;
+  }
+
+  nav > li > a:last-of-type {
+    padding: 0.3rem 1.2rem;
+  }
+
+  main {
+    margin: 0 10vw;
+  }
+}
