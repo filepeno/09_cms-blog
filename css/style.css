@@ -42,9 +42,15 @@ li {
 a {
   text-decoration: none;
 }
+a:hover {
+  color: var(--text-color);
+}
 
+a:link {
+  color: var(--text-color);
+}
 a:visited {
-  color: inherit;
+  color: var(--text-color);
 }
 
 a:active {
