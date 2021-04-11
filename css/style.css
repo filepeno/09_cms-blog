@@ -99,9 +99,9 @@ form {
 
 /* FULL POST PAGE */
 .full_post {
-  background-color: var(--bg-color_2);
+  /* background-color: var(--bg-color_2); */
   color: var(--text-color);
   text-align: left;
-  padding: 2rem;
-  box-shadow: -1px 4px 19px 0px rgba(23, 83, 89, 0.5);
+  /* padding: 2rem; */
+  /* box-shadow: -1px 4px 19px 0px rgba(23, 83, 89, 0.5); */
 }
