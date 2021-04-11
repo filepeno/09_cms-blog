@@ -89,11 +89,6 @@ form {
   flex-direction: column;
 }
 
-#form_submit {
-  padding: 1rem 2rem;
-  margin: 1rem 4rem 0 0;
-}
-
 .hidden {
   display: none;
 }
@@ -131,6 +126,7 @@ input[type="submit"]:hover {
   /* background-color: var(--bg-color_2); */
   color: var(--text-color);
   text-align: left;
-  /* padding: 2rem; */
+  padding-bottom: 2rem;
   /* box-shadow: -1px 4px 19px 0px rgba(23, 83, 89, 0.5); */
+  border-bottom: 1px solid var(--text-color);
 }
