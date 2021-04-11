@@ -3,6 +3,7 @@
   --bg-color_2: #13575e;
   --text-color: white;
   --contrast-color: rgb(227, 147, 0);
+  --contrast-color_2: rgb(241, 163, 19);
   /* --text-color_2: ; */
 }
 
@@ -98,12 +99,11 @@ form {
 }
 
 input {
-  width: 70%;
   min-width: 50%;
+  margin-bottom: 1rem;
 }
 
 textarea {
-  width: 70%;
   min-width: 50%;
 }
 
@@ -111,9 +111,19 @@ input[type="submit"] {
   background: var(--contrast-color);
   color: var(--text-color);
   margin-top: 1rem;
-  width: 6rem;
+  width: 10vw;
   padding: 0.3rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  align-self: end;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--contrast-color_2);
+  box-shadow: -1px 4px 19px 0px rgba(23, 83, 89, 0.5);
 }
 
 /* FULL POST PAGE */
