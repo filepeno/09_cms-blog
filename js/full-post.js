@@ -25,7 +25,8 @@ function showPost(post) {
   // console.log(post.comments);
   document.querySelector(".full_post h2").textContent = post.title;
   document.querySelector(".full_post h3 span").textContent = post.username;
-  document.querySelector(".full_post p").textContent = post.content;
+  document.querySelector(".full_post .post_date span").textContent = post.date;
+  document.querySelector(".full_post .content").textContent = post.content;
   //comments:
   //grab template
   const template = document.querySelector(".comment_template").content;
