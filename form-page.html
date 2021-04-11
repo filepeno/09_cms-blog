@@ -19,10 +19,7 @@
       </nav>
     </header>
     <main>
-      <header>
-        <h2>Your post</h2>
-        <p>Write what's on your mind:</p>
-      </header>
+      <h2>Your post</h2>
       <form>
         <!-- <label
           >Your username: <input type="text" name="username" required
@@ -32,12 +29,31 @@
           >Write your post here: <input type="textarea" name="content" required
         /></label>
         <label><input type="submit" value="Send" /></label> -->
-        <label for="form_username">Your username: </label>
-        <input type="text" name="username" id="form_username" required />
-        <label for="form_title">Post title:</label>
-        <input type="text" name="title" required id="form_title" />
-        <label for="form_content">Write your post here: </label>
-        <input type="textarea" name="content" required id="form_content" />
+        <label for="form_username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="form_username"
+          required
+          placeholder="Dummy123"
+        />
+        <label for="form_title">Title</label>
+        <input
+          type="text"
+          name="title"
+          required
+          id="form_title"
+          placeholder="My great article"
+        />
+        <label for="form_content">Post text</label>
+        <textarea
+          name="content"
+          required
+          id="form_content"
+          placeholder="Once upon a time..."
+          rows="4"
+          columns="8"
+        ></textarea>
         <input type="submit" value="Send" name="submit" />
       </form>
       <aside id="feedback" class="hidden">
