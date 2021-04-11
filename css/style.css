@@ -148,6 +148,22 @@ input[type="submit"]:hover {
   border-bottom: 1px solid var(--text-color);
 }
 
+ol {
+  padding: 0;
+}
+
+ol p {
+  font-style: italic;
+}
+
+ol h5 {
+  margin-bottom: 0.5rem;
+}
+
+ol li {
+  margin-bottom: 3rem;
+}
+
 /* media queries */
 
 @media screen and (max-width: 600px) {
