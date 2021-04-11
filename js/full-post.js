@@ -1,11 +1,16 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
-fetch("https://keafs-8b71.restdb.io/rest/posts/" + id + "?fetchchildren=true", {
-  method: "GET",
-  headers: {
-    "x-apikey": "602e39f15ad3610fb5bb62c6",
-  },
-})
+fetch(
+  "https://keafs-8b71.restdb.io/rest/posts/" +
+    id +
+    "?fetchchildren=true&metafields=true",
+  {
+    method: "GET",
+    headers: {
+      "x-apikey": "602e39f15ad3610fb5bb62c6",
+    },
+  }
+)
   .then((res) => res.json())
   .then((response) => {
     showPost(response);
@@ -25,7 +30,8 @@ function showPost(post) {
   // console.log(post.comments);
   document.querySelector(".full_post h2").textContent = post.title;
   document.querySelector(".full_post h3 span").textContent = post.username;
-  document.querySelector(".full_post .post_date span").textContent = post.date;
+  document.querySelector(".full_post .post_date span").textContent =
+    post._created;
   document.querySelector(".full_post .content").textContent = post.content;
   //comments:
   //grab template
